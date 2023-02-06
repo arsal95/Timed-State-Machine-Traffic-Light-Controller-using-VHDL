@@ -5,4 +5,4 @@ VHDL program of Timed State Machine for Traffic Light Controller. The time of ea
 
 | <img src="./Simulation/Timed State Machine.PNG"> |
 |:--:| 
-| * Timed State Machine for Traffic Light Controller * |
+| *Timed State Machine for Traffic Light Controller* |
