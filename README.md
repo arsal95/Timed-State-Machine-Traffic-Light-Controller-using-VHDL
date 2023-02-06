@@ -35,7 +35,7 @@ Entity declaration represents the external interface to the design entity. Entit
 * yellow - yellow/amber light
 * green - green light
 
-## Architecture:
+### Architecture:
 * In the entity a new type is defined with name “State_type” having values parameters as “st_stop”, “st_red”, “st_redyel”, “st_green”, and “st_yel”.
 * 2 Signals named State & next State is defined which are of type State_type.
 * A constant “MAX_COUNT” with a value of 10 is defined.
