@@ -26,3 +26,19 @@ The above given state machine diagram depicts the complete logic of our Timed St
 Entity declaration represents the external interface to the design entity. Entity statement declares the design name; here it is “tlctsm”. This interface consists of the following input and output ports:
 
 #### System Inputs:
+* reset - state machine reset (synchronous)
+* clk - system clock
+* start - starts TLC cycle
+* 
+#### System outputs:
+* red - red light
+* yellow - yellow/amber light
+* green - green light
+
+## Architecture:
+* In the entity a new type is defined with name “State_type” having values parameters as “st_stop”, “st_red”, “st_redyel”, “st_green”, and “st_yel”.
+* 2 Signals named State & next State is defined which are of type State_type.
+* A constant “MAX_COUNT” with a value of 10 is defined.
+* Subytype named Count_type with an range of 0 to 9 is defined.
+* Signal await_clks of Count_type type is defined. This signal determines the additional number of clock cycles a state is active. It has a default of 0, i.e. it stay active for one clock cycle.
+* Number of cloch cycles / state:
