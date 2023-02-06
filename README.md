@@ -29,7 +29,7 @@ Entity declaration represents the external interface to the design entity. Entit
 * reset - state machine reset (synchronous)
 * clk - system clock
 * start - starts TLC cycle
-* 
+
 #### System outputs:
 * red - red light
 * yellow - yellow/amber light
@@ -42,3 +42,4 @@ Entity declaration represents the external interface to the design entity. Entit
 * Subytype named Count_type with an range of 0 to 9 is defined.
 * Signal await_clks of Count_type type is defined. This signal determines the additional number of clock cycles a state is active. It has a default of 0, i.e. it stay active for one clock cycle.
 * Number of cloch cycles / state:
+<p align="center">st_red: 4 clock cycles</p>
