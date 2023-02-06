@@ -69,6 +69,4 @@ Test bench is used to test of the proper functioning of the high-level entity as
 The test bench code consists of two processes; clock process and a simulation process. The clock process is used to generate the clock for the system. The clock with the clock period of 10 nanoseconds has been used. Hence any change in the signal must be held for timer greater than one clock period in order for the simulator to respond to its change. The simulation process starts with the resetting of the controller. This allows verifying the response of the controller in the reset state. After 20 nanoseconds delay the start signal is active to initiate the traffic light controller and exit its st_stop state. Thus the first cycle of the traffic light controller begins from here. And as per our source code, the controller begins with st_red with the rising edge of the clock. Then it changes to st_ry and after that to st_green and in the end to st_yel. Finally, it returns to st_stop state marking the end of one complete cycle, because after 10 nanoseconds ‘start’ signal is set to 0. Now, the cycle starts again when the ‘start’ will active again.
 
 ## Simulation:
-| <img src="./Simulation/Simulation.png"> |
-|:--:| 
-| *Simulation Output* |
+
