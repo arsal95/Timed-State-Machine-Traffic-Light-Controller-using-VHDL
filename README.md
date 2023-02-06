@@ -43,3 +43,7 @@ Entity declaration represents the external interface to the design entity. Entit
 * Signal await_clks of Count_type type is defined. This signal determines the additional number of clock cycles a state is active. It has a default of 0, i.e. it stay active for one clock cycle.
 * Number of cloch cycles / state:
 <p align="center">st_red: 4 clock cycles</p>
+<p align="center">st_ry: 1 clock cycle</p>
+<p align="center">st_green: 5 clock cycles</p>
+<p align="center">st_yel: 1 clock cycle</p>
+* The process “seq_p” and “cmb_p” are defined to implement the Timed State Machine based Traffic Light Controller. Both processes execute parallel.
