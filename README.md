@@ -48,3 +48,17 @@ Entity declaration represents the external interface to the design entity. Entit
 <p align="center">st_yel: 1 clock cycle</p>
 
 * The process “seq_p” and “cmb_p” are defined to implement the Timed State Machine based Traffic Light Controller. Both processes execute parallel.
+
+#### Process seq_p:
+In sequential logic, the output is dependent on both the present input and the state (memory, based on earlier inputs). Therefore, sequential logic has memory.
+
+The sequential block executes every time with the rising edge of the clock. Upon the rising edge, it checks first for the reset condition. If the reset is not active then it assigns the next state, otherwise, it remains in the idle state.
+
+Beacuse it is a timed state machine, the next state is not assigned immediately but only after the predefined time for the state is met. The delay for the transition to the next_state is modeled using the signal await_clks.
+
+#### Process cmb_p:
+In combinational logic the output is only dependent on the present input. Therefore, sequential logic does not have the memory.
+
+The combinational block is used to define the next state transition condition as well as to assign the outputs of the states. The sensitivity list of the combinational block consists of the state and start signals. Hence, whenever there is a change in this signal the combinational process is computed by the simulator.
+
+The start signal turns on the state machine and the controller exits the st_stop state and switches to st_red. This current state is assigned as a state to the controller on the next rising edge of the clock. So, now the combinational block takes the action on the output signals, define the time duration of this state and compute the next_state. This next_state is assigned to the controller when the time duration await_clks is completed, on the rising edge of the system clock. The controller repeats the process until st_yel, and after st_yel controller check if start is 1 then the state switches from st_yel to st_red and repeats state cycle, or if the start is 0 then the state st_yel switches to the idle state st_stop.
