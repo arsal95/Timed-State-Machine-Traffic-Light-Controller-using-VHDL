@@ -75,3 +75,5 @@ The test bench code consists of two processes; clock process and a simulation pr
 
 ## Conclusion:
 By using combinational and sequential logic process together; the length of the code can be minimize, execution of the code become faster, and also the code become simpler to implement as well as to understand. Combinational logic circuit consists of only logic gates while the sequential logic circuits consist of logic gates and memory elements.
+
+Thank you for visiting my account. :slightly_smiling_face: 
